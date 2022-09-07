@@ -8,6 +8,7 @@ import { SharedModule } from '../shared/shared.module';
 import { AppRoutingModule } from '../app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { ComponentsModule } from '../components/components.module';
+import { AccoutSettingsComponent } from './accout-settings/accout-settings.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { ComponentsModule } from '../components/components.module';
     DashboardComponent,
     ProgressComponent,
     Grafica1Component,
-    PagesComponent
+    PagesComponent,
+    AccoutSettingsComponent
   ],
   imports: [
     FormsModule,
@@ -23,6 +25,13 @@ import { ComponentsModule } from '../components/components.module';
     SharedModule,
     AppRoutingModule,
     ComponentsModule
+  ],
+  exports: [
+    DashboardComponent,
+    ProgressComponent,
+    Grafica1Component,
+    PagesComponent,
+    AccoutSettingsComponent
   ]
 })
 export class PagesModule { }
