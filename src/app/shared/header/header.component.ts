@@ -1,5 +1,6 @@
 import { Component, NgZone } from '@angular/core';
 import { Router } from '@angular/router';
+import { Usuario } from '../../models/usuario.model';
 import { UsuarioService } from 'src/app/services/usuario.service';
 
 
@@ -12,9 +13,15 @@ declare const google: any;
 })
 export class HeaderComponent {
 
+  public usuario: Usuario;
+
   constructor(private usuarioService: UsuarioService,
               private router: Router,
-              private ngZone: NgZone) { }
+              private ngZone: NgZone) {
+                this.usuario = usuarioService.usuario;
+                console.log(this.usuario);
+
+              }
 
 
   logout(){
@@ -26,5 +33,7 @@ export class HeaderComponent {
       })
     })
   }
+
+
 
 }
