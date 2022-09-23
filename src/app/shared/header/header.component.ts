@@ -19,8 +19,6 @@ export class HeaderComponent {
               private router: Router,
               private ngZone: NgZone) {
                 this.usuario = usuarioService.usuario;
-                console.log(this.usuario);
-
               }
 
 
