@@ -34,7 +34,6 @@ export class PerfilComponent implements OnInit {
   }
 
   actualizarPerfil() {
-    console.log(this.perfilForm.value);
     this.usuarioService.actualizarPerfil(this.perfilForm.value)
       .subscribe((resp: any) => {
 
@@ -44,7 +43,6 @@ export class PerfilComponent implements OnInit {
 
         Swal.fire('Guardado', 'Cambios guardados con exitos', 'success')
       }, (error) => {
-        console.log(error);
         Swal.fire('Error', error.error.msg, 'error')
 
       })
@@ -78,7 +76,6 @@ export class PerfilComponent implements OnInit {
         Swal.fire('Imagen', 'Imagen actualizada correctamente', 'success');
       })
       .catch(err => {
-        console.log(err);
         Swal.fire('Error', err.error.msg, 'error')
       })
   }
